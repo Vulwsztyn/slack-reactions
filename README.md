@@ -1,5 +1,7 @@
 # slack-reactions
 
+![Example image](example.png)
+
 ## How to use
 
 1. Get a token as instructed here https://stackoverflow.com/a/67795540/7195666
