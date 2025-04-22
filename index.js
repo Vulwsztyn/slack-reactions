@@ -62,6 +62,7 @@ async function main() {
       ? randomSample(alphabets.filter((alphabet) => !usedAlphabets.includes(alphabet)))
       : alphabets.find((alphabet) => !usedAlphabets.includes(alphabet))
     const name = alphabet.replace('$', reaction)
+    console.log({ reaction, name })
     const response = await axios.post(
       'https://slack.com/api/reactions.add',
       {
@@ -73,6 +74,7 @@ async function main() {
     )
     used[reaction] = [...usedAlphabets, alphabet]
   }
+  for (let e = new Date().getTime() + 10000; new Date().getTime() < e; ) {  }
 }
 
 main()
